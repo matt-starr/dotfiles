@@ -1,6 +1,6 @@
 [user]
 	name = Matt Starr
-	email = m@ttstarr.com
+	email = {{ promptStringOnce . "email" "Git email" "m@ttstarr.com" }}
 [core]
 	editor = nvim
 [filter "lfs"]
