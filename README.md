@@ -24,7 +24,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
 ### 2. Apply dotfiles
 
 ```bash
-chezmoi init --apply https://github.com/YOUR_USERNAME/dotfiles.git
+chezmoi init --apply https://github.com/matt-starr/dotfiles.git
 ```
 
 This also runs `.chezmoiscripts/run_once_install-packages.sh` which installs:
