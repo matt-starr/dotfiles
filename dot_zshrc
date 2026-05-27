@@ -30,44 +30,21 @@ bindkey '^ ' autosuggest-accept
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Add MHS development tools to PATH
-export MORSE_ARM_PATH=/opt/morse/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin
-# export MORSE_ARM_PATH=/opt/morse/gcc-arm-none-eabi-10.3-2021.07/bin
-export MORSE_OPENOCD_PATH=/opt/morse/xpack-openocd-0.12.0-2/bin
-export PATH=$MORSE_ARM_PATH:$MORSE_OPENOCD_PATH:$PATH
-
-# pyenv 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+# Add ~/.local/bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
-
-# opencode
-export PATH=/home/matt.starr/.opencode/bin:$PATH
-
-# direnv
-eval "$(direnv hook zsh)"
 
 # Named directories: every subdir of ~/code becomes ~name (use: cd ~mhs)
 for d in ~/code/*(N/); do
   hash -d ${d:t}=$d
 done
 unset d
-hash -d fw=~/code/morse_firmware
-hash -d svt=~/code/morse_svt
 hash -d code=~/code
 
 # Aliases
 alias miniterm="python3 -m serial.tools.miniterm"
-alias xpack-openocd="/opt/morse/xpack-openocd-0.12.0-2/bin/openocd"
 
 # nvim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-# morse_firmware PATH
-source /opt/modules/init/profile.sh
-module switch riscv-gcc/20220921
-module switch riscv-openocd/20230322
-module switch gdb/14.2
-module switch uncrustify/0.72.0
-
+# Machine-local zsh config (work-specific stuff, not tracked)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
