@@ -1,0 +1,8 @@
+# nvim lazy lockfile — kept updated manually
+.config/nvim/lazy-lock.json
+
+# SSH keys — config only, never keys
+.ssh/id_*
+.ssh/morse_*
+.ssh/authorized_keys
+.ssh/known_hosts

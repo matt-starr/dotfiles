@@ -1,0 +1,3 @@
+# Compatibility for kitty & tmux
+Host *
+    SetEnv TERM=xterm-256color
