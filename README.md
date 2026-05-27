@@ -15,16 +15,8 @@ Personal dotfiles managed with [chezmoi](https://chezmoi.io).
 
 ## Install
 
-### 1. Install chezmoi
-
-```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
-```
-
-### 2. Apply dotfiles
-
-```bash
-chezmoi init --apply https://github.com/matt-starr/dotfiles.git
+```zsh
+sh -c "$(curl -fsLS https://get.chezmoi.io)" -- init --apply matt-starr
 ```
 
 This also runs `.chezmoiscripts/run_once_install-packages.sh` which installs:
