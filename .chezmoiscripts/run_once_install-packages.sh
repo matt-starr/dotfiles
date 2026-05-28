@@ -24,9 +24,3 @@ fi
 if [ ! -d "$CUSTOM_PLUGINS/zsh-syntax-highlighting" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting "$CUSTOM_PLUGINS/zsh-syntax-highlighting"
 fi
-
-# fzf
-if [ ! -d "$HOME/.fzf" ]; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
-    "$HOME/.fzf/install" --all --no-update-rc
-fi

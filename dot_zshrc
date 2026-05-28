@@ -20,6 +20,9 @@ source $ZSH/oh-my-zsh.sh
 # Machine-local secrets (not tracked in dotfiles)
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
 
+# Machine-local zsh config (work-specific stuff, not tracked)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # Enable ctrl-backspace
 bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
@@ -39,12 +42,3 @@ for d in ~/code/*(N/); do
 done
 unset d
 hash -d code=~/code
-
-# Aliases
-alias miniterm="python3 -m serial.tools.miniterm"
-
-# nvim
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
-# Machine-local zsh config (work-specific stuff, not tracked)
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

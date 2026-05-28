@@ -24,14 +24,14 @@ This also runs `.chezmoiscripts/run_once_install-packages.sh` which installs:
 - powerlevel10k
 - zsh-autosuggestions
 - zsh-syntax-highlighting
-- fzf
 
-### 3. Install system packages
+### Install system packages
 
 These vary by distro — install via your package manager:
 
 | Package | Debian | Arch | macOS |
 |---------|--------|------|-------|
+| fxf | `apt install fzf` | `pacman -S fzf` | `brew install fzf` |
 | git | `apt install git` | `pacman -S git` | `brew install git` |
 | openssh | `apt install openssh-client` | `pacman -S openssh` | built-in |
 | zsh | `apt install zsh` | `pacman -S zsh` | `brew install zsh` |
@@ -39,7 +39,7 @@ These vary by distro — install via your package manager:
 | kitty | [kitty.app](https://sw.kovidgoyal.net/kitty/binary/) | `pacman -S kitty` | `brew install --cask kitty` |
 | neovim | [nvim releases](https://github.com/neovim/neovim/releases) | `pacman -S neovim` | `brew install neovim` |
 
-### 4. Secrets
+### Secrets
 
 Create `~/.zsh_secrets` (not tracked in repo):
 
