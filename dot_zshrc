@@ -30,8 +30,8 @@ bindkey '^[[3;5~' kill-word
 # zsh-autosuggestion completion
 bindkey '^ ' autosuggest-accept
 
-# Fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Add ~/.local/bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
