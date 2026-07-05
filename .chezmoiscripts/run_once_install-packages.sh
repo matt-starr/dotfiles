@@ -24,3 +24,8 @@ fi
 if [ ! -d "$CUSTOM_PLUGINS/zsh-syntax-highlighting" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting "$CUSTOM_PLUGINS/zsh-syntax-highlighting"
 fi
+
+# tmux plugin manager
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+fi
