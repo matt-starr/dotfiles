@@ -58,6 +58,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', { buffer = args.buf })
         vim.keymap.set({'n', 'i'}, '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', { buffer = args.buf })
         vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = args.buf })
+        vim.keymap.set('n', 'rs', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = args.buf })
         vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = args.buf })
         vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', { buffer = args.buf })
         vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', { buffer = args.buf })

@@ -10,7 +10,14 @@ return {
     ---@module 'neo-tree'
     ---@type neotree.Config
     opts = {
-        -- options go here
+        window = {
+            mappings = {
+                ["o"] = function(state)
+                local node = state.tree:get_node()
+                vim.fn.jobstart({ "open", node.path }, { detach = true })
+            end,
+            },
+        },
     },
     keys = {
         { "<leader>e", ":Neotree toggle<cr>" },
