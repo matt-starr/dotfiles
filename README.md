@@ -27,19 +27,14 @@ This also runs `.chezmoiscripts/run_once_install-packages.sh` which installs:
 
 ### Install system packages
 
-These vary by distro — install via your package manager:
+These vary by distro. Arch install directions:
 
-| Package | Debian | Arch | macOS |
-|---------|--------|------|-------|
-| fxf | `apt install fzf` | `pacman -S fzf` | `brew install fzf` |
-| git | `apt install git` | `pacman -S git` | `brew install git` |
-| openssh | `apt install openssh-client` | `pacman -S openssh` | built-in |
-| zsh | `apt install zsh` | `pacman -S zsh` | `brew install zsh` |
-| tmux | `apt install tmux` | `pacman -S tmux` | `brew install tmux` |
-| kitty | [kitty.app](https://sw.kovidgoyal.net/kitty/binary/) | `pacman -S kitty` | `brew install --cask kitty` |
-| neovim | [nvim releases](https://github.com/neovim/neovim/releases) | `pacman -S neovim` | `brew install neovim` |
+```bash
+pacman -S fzf git openssh zsh tmux kitty neovim
+```
 
-### Secrets
+
+## Secrets
 
 Create `~/.zsh_secrets` (not tracked in repo):
 
@@ -47,3 +42,7 @@ Create `~/.zsh_secrets` (not tracked in repo):
 # ~/.zsh_secrets
 export MY_SECRET="..."
 ```
+
+## Other config to set up
+
+- Set Caps key to ctrl+esc. On linux, I do this using keyd. MacOS with Karabiner-Elements.
