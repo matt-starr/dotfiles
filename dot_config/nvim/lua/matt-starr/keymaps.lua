@@ -17,6 +17,7 @@ keymap("n", "<leader>tn", ":tabnext <CR>", opts)
 keymap("n", "<leader>tp", ":tabnext -<CR>", opts)
 
 keymap("n", "<leader>q", ":q<CR>", opts)
+keymap("n", "<leader>Q", ":qa!<CR>", opts)
 keymap("n", "<leader>c", ":ccl<CR>", opts)
 keymap("n", "<leader>h", ":set hls!<CR>", opts)
 
