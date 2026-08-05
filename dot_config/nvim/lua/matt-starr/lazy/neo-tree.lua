@@ -32,6 +32,8 @@ return {
                 local node = state.tree:get_node()
                 vim.fn.jobstart({ "open", node.path }, { detach = true })
             end,
+                ["<C-h>"] = function() vim.cmd("vertical resize +3") end,
+                ["<C-l>"] = function() vim.cmd("vertical resize -3") end,
             },
         },
     },
