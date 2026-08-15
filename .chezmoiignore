@@ -12,3 +12,6 @@
 .ssh/morse_*
 .ssh/authorized_keys
 .ssh/known_hosts
+
+# README.md file
+README.md
