@@ -110,6 +110,9 @@ vim.lsp.config('basedpyright', {
 })
 -- vim.lsp.enable('basedpyright')
 
+-- rust_analyzer for Rust
+vim.lsp.enable('rust_analyzer')
+
 -- -- bashls for shell
 -- -- sudo snap install bash-language-server --classic
 -- vim.lsp.enable('bashls')
